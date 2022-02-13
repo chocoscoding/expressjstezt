@@ -5,7 +5,7 @@ import cors from 'cors';
 import {router as AR} from './routes/route';
 
 const app = express();
-const port = process.env.PORT || 3303;
+const port = process.env.PORT || 3304;
 
 app.use(cors())
 app.use(express.json())
