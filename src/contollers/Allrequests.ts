@@ -49,7 +49,7 @@ const getTodos = (req:any, res:any)=>{
         let rawdata = atJson;
         const pageArr=  getPageArrangement({limit,page});
         const processingdata = rawdata.slice(pageArr.sliceStart, pageArr.sliceLimit);
-        res.json({result: processingdata, amount: pageArr.sliceLimit, page :pageArr.sliceStart +1})
+        res.json({result: processingdata, amount: limit, page})
 
     }
 }
