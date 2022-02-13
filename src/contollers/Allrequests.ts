@@ -1,7 +1,7 @@
-var apJson = require('../apidata/allPosts.json');
-var acJson = require('../apidata/allComments.json');
-var atJson = require('../apidata/allTodos.json');
-var auJson = require('../apidata/allUsers.json');
+var apJson = require('../../apidata/allPosts.json');
+var acJson = require('../../apidata/allComments.json');
+var atJson = require('../../apidata/allTodos.json');
+var auJson = require('../../apidata/allUsers.json');
 interface queryTi {
     limit: number;
     page: number;
