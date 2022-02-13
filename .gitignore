@@ -28,5 +28,3 @@ yarn-error.log*
 # out dir
 # dist/
 yarn.lock
-ccc
-/client/node_modules
