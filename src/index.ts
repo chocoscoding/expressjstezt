@@ -16,10 +16,10 @@ app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
 
-app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, '../clientbuild/build')));
 const frontendArr = ['/', '/about']
 app.get(frontendArr, (req,res)=>{
-  res.sendFile(path.join(__dirname, '../client/build', 'index.html'))
+  res.sendFile(path.join(__dirname, '../clientbuild/build', 'index.html'))
 })
 
 app.get('*', (req,res)=>{
