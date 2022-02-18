@@ -18,15 +18,24 @@ interface postT {
   id: number;
   msg: string;
   code: number;
+  type: number;
 }
 
 function bodycheck(datachecked: any) {
-  const { TodoStatus, TodoTitle, userId, resultType, id }: postT = datachecked;
-
-  if (!userId || !TodoStatus === undefined || !TodoTitle || !id) {
-    return true;
-  } else {
-    return false;
+  const { TodoStatus, TodoTitle, userId, resultType, id, type }: postT =
+    datachecked;
+  if (type === 1) {
+    if (!userId || !TodoStatus === undefined || !TodoTitle || !id) {
+      return true;
+    } else {
+      return false;
+    }
+  } else if (type === 2) {
+    if (!userId || !id) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
 var auJson = require("../../apidata/allUsers.json");
@@ -82,7 +91,7 @@ const createTodos = (req: Request, res: Response) => {
   const resarr = new Array(...atJson);
   const { limit, page, TodoStatus, TodoTitle, userId, resultType, id }: postT =
     req.body;
-  if (!bodycheck(req.body)) {
+  if (!bodycheck({ ...req.body, type: 1 })) {
     const resType: undefined | string = resultType || "normal";
     if (resType === "normal" || resType === undefined) {
       return res.status(200).json({
@@ -154,6 +163,23 @@ const createTodos = (req: Request, res: Response) => {
   }
 };
 const deleteTodos = (req: Request, res: Response) => {
+  const { userId, id }: postT = req.body;
+  if (!bodycheck({ ...req.body, type: 2 })) {
+    const rawdata = atJson;
+  } else {
+    const arrtcheck = [
+      { type: userId, name: "userId" },
+      { type: id, name: id },
+    ];
+    let arrtReceive: any = [];
+    arrtcheck.forEach((element) => {
+      if (!element.type) {
+        arrtReceive.push(element.name);
+      }
+    });
+    const msg = `Provide the valid data for ${arrtReceive.toString()} to be able to delete`;
+    return res.status(403).json({ msg });
+  }
   const data: JSON = atJson;
   res.json(atJson);
 };
