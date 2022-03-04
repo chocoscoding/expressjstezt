@@ -1,19 +1,137 @@
 .mainbody {
   color: #fff;
   height: 5rem;
-  position: fixed;
-  backdrop-filter: blur(10px);
-  background-color: rgba(240, 248, 255, 0.152);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(17px);
+  // background-color: rgba(240, 248, 255, 0.022);
   width: 100%;
   border: none;
-  border-bottom: 2.5px solid rgba(255, 255, 255, 0.152);
-  display: flex;
-  align-items: center;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.055);
 
-  .logo{
+
+  .logo {
+    transition: 0.3s all ease;
     height: 60%;
     width: auto;
     filter: brightness(210%);
     margin-left: 1rem;
+    @media screen and (max-width: 500px) {
+      height: 40%;
+    }
+    @media screen and (max-width: 350px) {
+      height: 35%;
+    }
+  }
+}
+
+.ul {
+  // width: 30%;
+  justify-content: space-between;
+  margin-right: 2%;
+  float: right;
+  height: 90%;
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width:1900px) and (min-width:1400px) {
+    li{
+      margin: 0px 50px;
+    }
+  }
+  @media screen and (max-width:400px) {
+    backdrop-filter: blur(10px);
+    position: absolute;
+    backdrop-filter: blur(17px);
+    background-color: #111017;
+    top: 4rem;
+    flex-direction: column;
+    padding: 0;
+    right: 0;
+    width: 50vw;
+    margin-right: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 90vh;
+    overflow: hidden;
+    transition: 0.3s all ease;
+  }
+
+  li {
+    transition: 0.3s all ease;
+    cursor: pointer;
+    margin: 0px 13px;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin-top: 3px;
+
+    @media screen and (max-width:400px) {
+      padding-bottom: 9px;
+    }
+
+    &:hover{
+      filter: opacity(70%);
+    }
+    .underl{
+      transition: 0.3s all ease;
+      background-image: linear-gradient(rgb(230, 16, 62), rgb(117, 11, 223));
+      border: none;
+      height: 2px;
+      width: 0%;
+      border-radius: 10px;
+      margin-top: 5px;
+    }
+    .underlu{
+      transition: 0.3s all ease;
+      background-image: linear-gradient(rgb(230, 16, 62), rgb(117, 11, 223));
+      border: none;
+      height: 2px;
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 5px;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.42rem;
+
+      @media screen and (max-width:623px) {
+        font-size:1.2rem;
+      }
+    }
+  }
+}
+
+.wrapper{
+  position: relative;
+  width: 100%;
+  height:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.repo{
+  margin-top: 10px;
+  @media screen and (max-width:400px) {
+    margin-top: 0;
+  }
+}
+
+.navhide{
+  height: 0;
+}
+
+.menubox{
+  display: none;
+  width: 2.5rem;
+  height: auto;
+
+  @media screen and (max-width:400px) {
+    display: block;
+  }
+
+  svg{
+    font-size: 1.6rem;
   }
 }

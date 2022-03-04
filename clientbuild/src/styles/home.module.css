@@ -1,0 +1,210 @@
+* {
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.gradient_bg_services {
+  color: #fff;
+}
+
+.titlecont {
+  width: 100%;
+}
+
+.title {
+  font-size: 9rem;
+  font-weight: 500;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e6103e), to(#750bdf));
+  background-image: linear-gradient(#e6103e, #750bdf);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  -webkit-animation: movecolor 0.8s ease-in infinite;
+          animation: movecolor 0.8s ease-in infinite;
+}
+
+@media screen and (max-width: 988px) {
+  .title {
+    font-size: 7rem;
+  }
+}
+
+@media screen and (max-width: 783px) {
+  .title {
+    font-size: 5.9rem;
+  }
+}
+
+@media screen and (max-width: 666px) {
+  .title {
+    font-size: 4.9rem;
+  }
+}
+
+@media screen and (max-width: 553px) {
+  .title {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 442px) {
+  .title {
+    font-size: 3.3rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+.titlep {
+  color: #fff;
+  letter-spacing: 4px;
+  font-size: 2rem;
+  margin: 15px 0;
+  font-weight: 100;
+}
+
+@media screen and (max-width: 783px) {
+  .titlep {
+    font-size: 1.5rem;
+    letter-spacing: normal;
+  }
+}
+
+@media screen and (max-width: 666px) {
+  .titlep {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 553px) {
+  .titlep {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .titlep {
+    font-size: 0.7rem;
+  }
+}
+
+.titleh4 {
+  font-size: larger;
+  font-weight: 100;
+}
+
+@media screen and (max-width: 666px) {
+  .titleh4 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 553px) {
+  .titleh4 {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .titleh4 {
+    font-size: 0.6rem;
+  }
+}
+
+.bold {
+  font-weight: 800;
+  font-style: italic;
+  color: #ff1043;
+  margin: 0 4px;
+}
+
+@-webkit-keyframes movecolor {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes movecolor {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.secondcont {
+  background-color: #141228;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 20px;
+}
+
+.secondcont h3 {
+  text-align: left;
+  font-weight: 200;
+}
+
+.secondcont h4 {
+  text-align: left;
+  font-weight: 200;
+}
+
+.run {
+  border-radius: 10px;
+  width: 90px;
+  height: 30px;
+  border: none;
+  color: #fff;
+  text-align: center;
+  background-color: #ff1043;
+  margin: 10px 0;
+}
+
+.thirdcont {
+  background-color: #111017;
+  text-align: left;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  word-wrap: break-word;
+  padding-left: 12px;
+  padding-left: 8px;
+}
+
+.thirdcont h3 {
+  text-align: left;
+  font-weight: 200;
+}
+
+.thirdcont h4 {
+  text-align: left;
+  font-weight: 200;
+}
+
+.footerbody {
+  width: 100%;
+  background-color: #141228;
+  padding: 15px 0;
+}
+/*# sourceMappingURL=home.module.css.map */

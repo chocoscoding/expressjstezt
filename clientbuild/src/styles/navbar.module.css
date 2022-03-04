@@ -1,13 +1,45 @@
 .mainbody {
   color: #fff;
   height: 5rem;
-  position: fixed;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  background-color: rgba(240, 248, 255, 0.152);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  -webkit-backdrop-filter: blur(17px);
+          backdrop-filter: blur(17px);
   width: 100%;
   border: none;
-  border-bottom: 2.5px solid rgba(255, 255, 255, 0.152);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.055);
+}
+
+.mainbody .logo {
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  height: 60%;
+  width: auto;
+  -webkit-filter: brightness(210%);
+          filter: brightness(210%);
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  .mainbody .logo {
+    height: 40%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .mainbody .logo {
+    height: 35%;
+  }
+}
+
+.ul {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 2%;
+  float: right;
+  height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,11 +48,147 @@
           align-items: center;
 }
 
-.mainbody .logo {
-  height: 60%;
-  width: auto;
-  -webkit-filter: brightness(210%);
-          filter: brightness(210%);
-  margin-left: 1rem;
+@media screen and (max-width: 1900px) and (min-width: 1400px) {
+  .ul li {
+    margin: 0px 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .ul {
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    position: absolute;
+    -webkit-backdrop-filter: blur(17px);
+            backdrop-filter: blur(17px);
+    background-color: #111017;
+    top: 4rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    right: 0;
+    width: 50vw;
+    margin-right: 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: 90vh;
+    overflow: hidden;
+    -webkit-transition: 0.3s all ease;
+    transition: 0.3s all ease;
+  }
+}
+
+.ul li {
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  cursor: pointer;
+  margin: 0px 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style-type: none;
+  margin-top: 3px;
+}
+
+@media screen and (max-width: 400px) {
+  .ul li {
+    padding-bottom: 9px;
+  }
+}
+
+.ul li:hover {
+  -webkit-filter: opacity(70%);
+          filter: opacity(70%);
+}
+
+.ul li .underl {
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e6103e), to(#750bdf));
+  background-image: linear-gradient(#e6103e, #750bdf);
+  border: none;
+  height: 2px;
+  width: 0%;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.ul li .underlu {
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e6103e), to(#750bdf));
+  background-image: linear-gradient(#e6103e, #750bdf);
+  border: none;
+  height: 2px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.42rem;
+}
+
+@media screen and (max-width: 623px) {
+  .ul li a {
+    font-size: 1.2rem;
+  }
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.repo {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 400px) {
+  .repo {
+    margin-top: 0;
+  }
+}
+
+.navhide {
+  height: 0;
+}
+
+.menubox {
+  display: none;
+  width: 2.5rem;
+  height: auto;
+}
+
+@media screen and (max-width: 400px) {
+  .menubox {
+    display: block;
+  }
+}
+
+.menubox svg {
+  font-size: 1.6rem;
 }
 /*# sourceMappingURL=navbar.module.css.map */
