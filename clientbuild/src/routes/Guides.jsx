@@ -310,7 +310,7 @@ const Guides = () => {
       </div>
       <div className={guides.cont}>
         <h3>
-          <span className={`${guides.spanbox} ${guides.patch}`}>PATCH</span>{" "}
+          <span className={`${guides.spanbox} ${guides.patch}`}>PATCH</span>{" "} Edit Todo
         </h3>
         <div className={guides.wrapper}>
           <Codeblock
@@ -393,7 +393,7 @@ const Guides = () => {
       </div>
       <div className={guides.cont}>
         <h3>
-          <span className={`${guides.spanbox} ${guides.delete}`}>DELETE</span>{" "}
+          <span className={`${guides.spanbox} ${guides.delete}`}>DELETE</span>{" "} Delete Todo
         </h3>
         <div className={guides.wrapper}>
           <Codeblock
@@ -451,11 +451,3 @@ const Guides = () => {
 };
 
 export default Guides;
-
-// "userId": 10,
-//     "id": 209,
-//     "TodoTitle": "dljjdjklcjdsjlljclkjalkjadkljkljakljkdjdj",
-//     "resultType" : "mutated",
-//     "TodoStatus": true,
-//     "limit":20,
-//     "page": 2
