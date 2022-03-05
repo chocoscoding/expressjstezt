@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "FakeApi",
+  "short_name": "FakeApi",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
