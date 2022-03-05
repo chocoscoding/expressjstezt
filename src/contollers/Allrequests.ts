@@ -76,7 +76,6 @@ function err2(data: { type: any; name: string }[]) {
       if (element.type === undefined || element.type === "mutated") {
         console.log("right");
       } else {
-        // console.log('wrong');
         arrtReceive.push(element.name);
       }
     } else if (!element.type) {
@@ -133,14 +132,49 @@ function sortarr(arr: any) {
 }
 
 const getPosts = (req: Request, res: Response) => {
+  const {id} = req.params;
+  if(id){
+    const firstarray = apJson.filter((data: any) => data.id === ~~id);
+    if(firstarray.length < 1){
+      return res.status(400).json({msg: "This id doesn't exist"})
+    }
+    else{
+      return res.status(200).json({...firstarray})
+    }
+  }
+  
+  
   //get the posts data
   return res.status(200).json(apJson);
 };
 const getUsers = (req: Request, res: Response) => {
+  const {id} = req.params;
+  if(id){
+    const firstarray = auJson.filter((data: any) => data.id === ~~id);
+    if(firstarray.length < 1){
+      return res.status(400).json({msg: "This id doesn't exist"})
+    }
+    else{
+      return res.status(200).json({...firstarray})
+    }
+  }
+  
   //get users data
   return res.status(200).json(auJson);
 };
 const getComments = (req: Request, res: Response) => {
+  const data = acJson
+  const {id} = req.params;
+  if(id){
+    const firstarray = data.filter((data: any) => data.id === ~~id)
+    
+    if(firstarray.length < 1){
+    return res.status(400).json({msg: "This id doesn't exist"})}
+    else{
+      return res.status(200).json(firstarray)
+    }
+  }
+  
   //get comments data
   return res.status(200).json(acJson);
 };

@@ -61,7 +61,7 @@
 
 .titlep {
   color: #fff;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   font-size: 2rem;
   margin: 15px 0;
   font-weight: 100;
@@ -192,6 +192,13 @@
   padding-left: 8px;
 }
 
+.thirdcont h2 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  font-size: 2rem;
+  font-weight: 100;
+  max-width: 500px;
+}
+
 .thirdcont h3 {
   text-align: left;
   font-weight: 200;
@@ -202,9 +209,45 @@
   font-weight: 200;
 }
 
+.thirdcont li {
+  font-size: 1rem;
+  font-weight: 100;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 300px) {
+  .thirdcont li {
+    font-size: 0.97rem;
+    margin-bottom: 7px;
+  }
+}
+
+.thirdcont p {
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+@media screen and (max-width: 300px) {
+  .thirdcont p {
+    font-size: 0.97rem;
+  }
+}
+
 .footerbody {
   width: 100%;
   background-color: #141228;
   padding: 15px 0;
+  color: #fff;
+}
+
+.footerbody a {
+  color: #ff1043;
+}
+
+@media screen and (max-width: 350px) {
+  .footerbody {
+    font-weight: 100;
+    font-size: 0.9rem;
+  }
 }
 /*# sourceMappingURL=home.module.css.map */

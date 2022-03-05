@@ -12,8 +12,11 @@ import {
 } from "../contollers/Allrequests";
 
 router.route("/posts").get(getPosts);
+router.route("/posts/:id").get(getPosts);
 router.route("/users").get(getUsers);
+router.route("/users/:id").get(getUsers);
 router.route("/comments").get(getComments);
+router.route("/comments/:id").get(getComments);
 router
   .route("/todos")
   .get(getTodos)

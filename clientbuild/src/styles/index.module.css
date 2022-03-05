@@ -1,8 +1,7 @@
 .gradient_bg_services {
   height: 20rem;
   background-color: #0f0e13;
+  background-image: radial-gradient(at 0% 0%, #100f15 0, transparent 50%);
   color: #fff;
-  border: 1px solid red;
-  
 }
 /*# sourceMappingURL=index.module.css.map */

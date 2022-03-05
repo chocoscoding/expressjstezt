@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Nav from "../styles/navbar.module.css";
 import {AiFillGithub, AiOutlineCloseCircle, AiOutlineMenu} from 'react-icons/ai'
 
+
 const Navbar = () => {
+  let route = useLocation().pathname;
+
   const [navstatus, setNavstatus] = useState(true)
   const [currentn, setCurrentn] = useState({
     home: true,
@@ -12,7 +15,7 @@ const Navbar = () => {
   });
 
   function changec(param) {
-    if (param === "home") {
+    if (param === "/") {
       setCurrentn({
         home: true,
         guide: false,
@@ -24,6 +27,11 @@ const Navbar = () => {
       });
     }
   }
+  
+  useEffect(()=>{
+    changec(route)
+    
+  }, [route])
 
   return (
     <nav className={Nav.mainbody}>
@@ -34,11 +42,11 @@ const Navbar = () => {
         className={Nav.logo}
       />
       <ul className={`${!navstatus? Nav.ul : (`${Nav.ul} ${Nav.navhide}` )}`}>
-        <li onClick={()=> changec('home')}>
+        <li>
           <Link to={`/`}>Home</Link>
           <span className={`${currentn.home ? Nav.underlu : Nav.underl}`}></span>
         </li>
-        <li onClick={()=> changec('guide')}>
+        <li >
           <Link to={`/guides`}>Guides</Link>
 
           <span className={`${currentn.guide ? Nav.underlu : Nav.underl}`}></span>

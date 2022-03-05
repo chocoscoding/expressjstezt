@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import home from "../styles/home.module.css";
 import { Codeblock } from "../components";
-import {Footer} from '../components'
+import { Footer } from "../components";
 const Home = () => {
   const [runf, setrun] = useState(false);
   const [textl, settextl] = useState(false);
@@ -30,7 +30,7 @@ const Home = () => {
 
         <Codeblock
           {...{
-            code: `fetch('https://jsonplaceholder.typicode.com/todos/1')
+            code: `fetch('https://expressjstezt-production.up.railway.app/api/comments/234')
 .then(response => response.json())
 .then(json => console.log(json))`,
             language: "javascript",
@@ -47,10 +47,16 @@ const Home = () => {
           <React.Fragment>
             <Codeblock
               {...{
-                code: `fetch('https://jsonplaceholder.typicode.com/todos/1')
-.then(response => response.json())
-.then(json => console.log(json))`,
-                language: "json",
+                code: `[
+              {
+                "postId": 47,
+                "id": 234,
+                "name": "natus et necessitatibus animi",
+                "email": "Cheyanne.Schowalter@alycia.biz",
+                "body": "itaque voluptatem voluptas velit non est rerum incidunt\nvitae aut labore accusantium in atque\nrepudiandae quos necessitatibus\nautem ea excepturi"
+              }
+            ]`,
+                language: "js",
                 showLineNumbers: true,
                 startingLineNumber: 1,
               }}
@@ -82,11 +88,9 @@ const Home = () => {
         <p> FakeApi comes with a set of 6 common resources:</p>
         <ul>
           <li>/posts 100 posts</li>
-          <li>/comments 500 comments</li>
-          <li>/albums 100 albums</li>
-          <li>/todos 200 todos</li>
           <li>/users 10 users</li>
-          <li></li>
+          <li>/comments 500 comments</li>
+          <li>/todos 200 todos</li>
         </ul>
         <p>
           Note: resources have relations. For example: posts have many comments,
@@ -95,22 +99,28 @@ const Home = () => {
 
         <br />
 
-        <p>
-        Routes All HTTP methods are supported. You can use http or https for
-        your requests.
-</p>
+        <h2> Routes</h2>
 
-<ul>
-          <li>GET /posts</li>
-          <li>/comments 500 comments</li>
-          <li>/albums 100 albums</li>
-          <li>/todos 200 todos</li>
-          <li>PATCH /posts</li>
-          <li>DELETE
-        /posts</li>
+        <p>
+          Routes All HTTP methods are supported. You can use http or https for
+          your requests.
+        </p>
+
+        <ul>
+          <li>GET api/posts</li>
+          <li>GET api/posts/id</li>
+          <li>GET api/users </li>
+          <li>GET api/users/id </li>
+          <li>GET api/comments</li>
+          <li>GET api/comments/id</li>
+          <li>GET api/todos</li>
+          <li>POST api/todos</li>
+          <li>PATCH api/todos</li>
+          <li>DELETE api/todos</li>
         </ul>
       </div>
-        <Footer/>
+
+      <Footer />
     </div>
   );
 };
