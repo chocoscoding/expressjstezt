@@ -92,10 +92,6 @@ const Home = () => {
           <li>/comments 500 comments</li>
           <li>/todos 200 todos</li>
         </ul>
-        <p>
-          Note: resources have relations. For example: posts have many comments,
-          albums have many photos, ... see guide for the full list.
-        </p>
 
         <br />
 
